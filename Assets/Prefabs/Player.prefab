@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deae58b10ff72004e82d0195479f0b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdColor: {r: 0.09387112, g: 0, b: 1, a: 1}
+  holdColor: {r: 0, g: 1, b: 0.15691185, a: 1}
 --- !u!1 &2756096670052376851
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +171,8 @@ MonoBehaviour:
   rightHolder: {fileID: 2013126871545283996}
   leftJoint: {fileID: 5204980128175002630}
   rightJoint: {fileID: 2257623456763128724}
-  moveStrength: 15
+  moveStrength: 7
+  moveStrengthWhenHolding: 15
 --- !u!114 &6709385263471841818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -466,4 +467,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: deae58b10ff72004e82d0195479f0b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdColor: {r: 1, g: 0, b: 0, a: 1}
+  holdColor: {r: 1, g: 0, b: 0.89199066, a: 1}

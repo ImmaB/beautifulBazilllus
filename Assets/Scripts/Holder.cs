@@ -6,12 +6,11 @@ using UnityEngine;
 public class Holder : MonoBehaviour
 {
     private SpriteRenderer sprite;
-    private HingeJoint2D joint;
+    public HingeJoint2D joint { get; private set; }
 
     [SerializeField] private Color holdColor;
     private Color idleColor;
-    private bool holding = false;
-
+    public bool holding { get; private set; } = false;
 
     private void Start()
     {

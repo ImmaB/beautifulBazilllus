@@ -9,9 +9,12 @@ public class Player : MonoBehaviour
     [SerializeField] private HingeJoint2D rightJoint;
 
     public float moveStrength = 1;
+    public float moveStrengthWhenHolding = 1;
     private PlayerInput input;
     private Vector2 moveInput;
     private Rigidbody2D rigBod;
+
+    public bool holding { get { return leftHolder.joint.enabled || rightHolder.joint.enabled; } }
 
     // Start is called before the first frame update
     private void Start()
@@ -26,7 +29,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         if (moveInput.magnitude > Mathf.Epsilon)
-            rigBod.AddForce(moveInput * moveStrength);   
+            rigBod.AddForce(moveInput * (holding ? moveStrengthWhenHolding : moveStrength));   
     }
 
     internal void OnMove(InputAction.CallbackContext ctx)
