@@ -3,8 +3,10 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private HingeJoint2D jointLeft;
-    [SerializeField] private HingeJoint2D jointRight;
+    [SerializeField] private Holder leftHolder;
+    [SerializeField] private Holder rightHolder;
+    [SerializeField] private HingeJoint2D leftJoint;
+    [SerializeField] private HingeJoint2D rightJoint;
 
     public float moveStrength = 1;
     private PlayerInput input;
@@ -15,8 +17,9 @@ public class Player : MonoBehaviour
     private void Start()
     {
         input = GetComponent<PlayerInput>();
-        jointLeft.enabled = false;
-        jointRight.enabled = false;
+        rigBod = GetComponent<Rigidbody2D>();
+        leftHolder.SetJoint(leftJoint);
+        rightHolder.SetJoint(rightJoint);
     }
 
     // Update is called once per frame
@@ -26,23 +29,19 @@ public class Player : MonoBehaviour
             rigBod.AddForce(moveInput * moveStrength);   
     }
 
-    public void OnMove(InputAction.CallbackContext ctx)
+    internal void OnMove(InputAction.CallbackContext ctx)
     {
-        moveInput.x = ctx.ReadValue<Vector2>().x;
+        moveInput = ctx.ReadValue<Vector2>();
     }
 
-    public void OnHoldLeft(InputAction.CallbackContext ctx) { OnHold(ctx, jointLeft); }
-    public void OnHoldRight(InputAction.CallbackContext ctx) { OnHold(ctx, jointRight); }
+    internal void OnHoldLeft(InputAction.CallbackContext ctx) { OnHold(ctx, leftHolder); }
+    internal void OnHoldRight(InputAction.CallbackContext ctx) { OnHold(ctx, rightHolder); }
 
-    private void OnHold(InputAction.CallbackContext ctx, HingeJoint2D joint)
+    private void OnHold(InputAction.CallbackContext ctx, Holder holder)
     {
-        if (ctx.IsInputStart()) // start Holding
-        {
-            Collider2D col = Physics2D.OverlapCircle(joint.transform.position.To2D(), Mathf.Epsilon, Layers.foreGroundMask);
-        }
-        else if (ctx.IsInputStop()) // stop holding
-        {
-
-        }
+        if (ctx.IsInputStart())
+            holder.Hold();
+        else if (ctx.IsInputStop())
+            holder.Hold(false);
     }
 }

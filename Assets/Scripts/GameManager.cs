@@ -6,8 +6,8 @@ using UnityEngine;
 public static class Layers {
     public static int player = LayerMask.NameToLayer("Player");
     public static int playerMask = LayerMask.GetMask("Player");
-    public static int foreGround = LayerMask.NameToLayer("ForeGround");
-    public static int foreGroundMask = LayerMask.GetMask("ForeGround");
+    public static int foreground = LayerMask.NameToLayer("Foreground");
+    public static int foregroundMask = LayerMask.GetMask("Foreground");
 
     public static int ToMask(params int[] layers)
     {
