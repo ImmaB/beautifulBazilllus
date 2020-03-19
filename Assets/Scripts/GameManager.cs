@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public static class Layers {
+public static class Layer {
     public static int player = LayerMask.NameToLayer("Player");
     public static int playerMask = LayerMask.GetMask("Player");
     public static int foreground = LayerMask.NameToLayer("Foreground");
@@ -14,6 +14,12 @@ public static class Layers {
         var layerNames = layers.Map(l => LayerMask.LayerToName(l));
         return LayerMask.GetMask(layerNames.ToArray());
     }
+}
+
+public static class Tag
+{
+    public static string player = "Player";
+    public static string saveZone = "Save Zone";
 }
 
 public class GameManager : MonoBehaviour

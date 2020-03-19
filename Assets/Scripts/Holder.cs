@@ -37,7 +37,7 @@ public class Holder : MonoBehaviour
         if (hold)
         {
             if (joint.enabled) return;
-            Collider2D col = Physics2D.OverlapCircle(transform.position.To2D(), Mathf.Epsilon, Layers.foregroundMask);
+            Collider2D col = Physics2D.OverlapCircle(transform.position.To2D(), Mathf.Epsilon, Layer.foregroundMask);
             if (!col) return;
             joint.enabled = true;
             joint.connectedBody = col.attachedRigidbody;
