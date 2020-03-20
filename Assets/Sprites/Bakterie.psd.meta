@@ -1,9 +1,72 @@
 fileFormatVersion: 2
 guid: 40b4f1d85bfa20a40bddf5f54e00890e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2588291451233544040
+    second: Body
+  - first:
+      213: -7562936858222707418
+    second: LeftLeg1
+  - first:
+      213: -8940313983988266878
+    second: LeftLeg2
+  - first:
+      213: -5084122431111154036
+    second: LeftLeg3
+  - first:
+      213: -6020964432596385750
+    second: LeftLeg4
+  - first:
+      213: -294822578872646553
+    second: LeftLeg6
+  - first:
+      213: -1511052247737766459
+    second: LeftLeg5
+  - first:
+      213: -8201706160634823694
+    second: LeftLeg7
+  - first:
+      213: 3048702865924244414
+    second: LeftLeg8
+  - first:
+      213: 4649140619521867249
+    second: LeftLeg9
+  - first:
+      213: -3817244460417824079
+    second: LeftLeg10
+  - first:
+      213: 7055079408950862639
+    second: RightLeg1
+  - first:
+      213: -1470218440230570947
+    second: RightLeg2
+  - first:
+      213: 8385577649778119157
+    second: RightLeg3
+  - first:
+      213: -7997457624310251282
+    second: RightLeg4
+  - first:
+      213: -8032116370383942578
+    second: RightLeg5
+  - first:
+      213: -9169457447357750439
+    second: RightLeg6
+  - first:
+      213: 3390919276142429595
+    second: RightLeg7
+  - first:
+      213: -7238642533465402001
+    second: RightLeg8
+  - first:
+      213: 3833507181204116313
+    second: RightLeg9
+  - first:
+      213: -6470700312915619635
+    second: RightLeg10
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -40,7 +103,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,6 +120,7 @@ TextureImporter:
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -70,9 +134,462 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Body
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 1932
+        width: 361
+        height: 1172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867a4fd8c557be320800000000000000
+      internalID: 2588291451233544040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg1
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1748
+        width: 96
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d3de26ffc0b0790800000000000000
+      internalID: -7562936858222707418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg2
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 1583
+        width: 89
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2880ce3accf9de380800000000000000
+      internalID: -8940313983988266878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg3
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 1398
+        width: 95
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c863603f5919179b0800000000000000
+      internalID: -5084122431111154036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg4
+      rect:
+        serializedVersion: 2
+        x: 843
+        y: 1222
+        width: 91
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a20c4ddbfbc317ca0800000000000000
+      internalID: -6020964432596385750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg6
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 942
+        width: 31
+        height: 156
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76408823d6498ebf0800000000000000
+      internalID: -294822578872646553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg5
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1086
+        width: 46
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cde8809cf9a70be0800000000000000
+      internalID: -1511052247737766459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg7
+      rect:
+        serializedVersion: 2
+        x: 909
+        y: 759
+        width: 37
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb7a3f83bfad2e80800000000000000
+      internalID: -8201706160634823694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg8
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 594
+        width: 35
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb341259a1b2f4a20800000000000000
+      internalID: 3048702865924244414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg9
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 391
+        width: 43
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fdb071e2c0158040800000000000000
+      internalID: 4649140619521867249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LeftLeg10
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 216
+        width: 84
+        height: 189
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bac7fb436c660bc0800000000000000
+      internalID: -3817244460417824079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg1
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 1756
+        width: 122
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2360b0d75da8e160800000000000000
+      internalID: 7055079408950862639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg2
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 1588
+        width: 91
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34f3df3e1cb89be0800000000000000
+      internalID: -1470218440230570947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg3
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 1404
+        width: 69
+        height: 221
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f1da7b917e8f5470800000000000000
+      internalID: 8385577649778119157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg4
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 1221
+        width: 50
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee08fbcb9a2530190800000000000000
+      internalID: -7997457624310251282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg5
+      rect:
+        serializedVersion: 2
+        x: 1491
+        y: 1080
+        width: 42
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c4aa497b0388090800000000000000
+      internalID: -8032116370383942578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg6
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 932
+        width: 43
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9536e23980b8fb080800000000000000
+      internalID: -9169457447357750439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg7
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 757
+        width: 47
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b958e74ad17fe0f20800000000000000
+      internalID: 3390919276142429595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg8
+      rect:
+        serializedVersion: 2
+        x: 1525
+        y: 561
+        width: 48
+        height: 226
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65d2c0c7fc2b8b90800000000000000
+      internalID: -7238642533465402001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg9
+      rect:
+        serializedVersion: 2
+        x: 1538
+        y: 356
+        width: 69
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9539493787a533530800000000000000
+      internalID: 3833507181204116313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RightLeg10
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 172
+        width: 127
+        height: 208
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0d7a049547336a0800000000000000
+      internalID: -6470700312915619635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -85,7 +602,7 @@ TextureImporter:
     secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
+  pSDShowRemoveMatteOption: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
