@@ -232,7 +232,7 @@
                 {
                     "name": "",
                     "id": "04961cd5-d362-464d-b789-c566456d2707",
-                    "path": "<Keyboard>/space",
+                    "path": "<Keyboard>/alt",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -255,6 +255,17 @@
                     "name": "",
                     "id": "383457b5-43ee-49ee-984d-257bbd3dbb29",
                     "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HoldRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "006bba0c-e3c3-49c3-a042-de1bc4d43e0c",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
