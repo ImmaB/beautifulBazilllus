@@ -38,6 +38,7 @@ public class Holder : MonoBehaviour
             joint.enabled = true;
             joint.connectedBody = col.attachedRigidbody;
             joint.connectedAnchor = new Vector2(0, 0);
+            SoundManager.PlaySlime();
         }
         else
         {

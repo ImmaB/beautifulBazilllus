@@ -23,6 +23,7 @@ public class Wagon : MonoBehaviour
         {
             Vector2 randomShake = minShakeForce + (maxShakeForce - minShakeForce) * new Vector2(Rand.Float(-1, 1), Rand.Float(-1, 1));
             rigBod.AddForce(randomShake);
+            SoundManager.PlayTrainShake();
             yield return new WaitForSeconds(shakeInterval + Rand.Float(-1, 1) * shakeIntervalTolerance);
         }
     }

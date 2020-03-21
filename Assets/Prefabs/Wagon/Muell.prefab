@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7533249809534867044}
   - component: {fileID: 7533249809534867045}
   - component: {fileID: -4138081259577543763}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Muell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7533249809534867046}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
