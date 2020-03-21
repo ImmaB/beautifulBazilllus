@@ -20,19 +20,14 @@ public class Player : MonoBehaviour
     public bool holding { get { return leftHolder.joint.enabled || rightHolder.joint.enabled; } }
     [HideInInspector] public int inSaveZones = 0;
 
-    // Start is called before the first frame update
     private void Start()
     {
         input = GetComponent<PlayerInput>();
         rigBod = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
-        // if (moveInput.magnitude > Mathf.Epsilon)
-        //     rigBod.AddForce(moveInput * (holding ? moveStrengthWhenHolding : moveStrength));
-
         if (moveInput.magnitude > Mathf.Epsilon)
         {
             Vector2 force = moveInput * (holding ? moveStrengthWhenHolding : moveStrength);
