@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4022203946471095304}
   - component: {fileID: 4022203946471095415}
   - component: {fileID: 1448341616457160877}
+  - component: {fileID: 5913517458485197759}
+  - component: {fileID: 7916679688342681584}
   m_Layer: 9
   m_Name: Koffer
   m_TagString: Untagged
@@ -161,3 +163,50 @@ PolygonCollider2D:
       - {x: -2.5529952, y: -7.3125615}
       - {x: -2.4089854, y: -7.6970053}
       - {x: -1.9655554, y: -7.695025}
+--- !u!50 &5913517458485197759
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022203946471095305}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!234 &7916679688342681584
+SliderJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4022203946471095305}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 15.068241, y: -1.3233006}
+  m_AutoConfigureAngle: 1
+  m_Angle: -0.48282358
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_TranslationLimits:
+    m_LowerTranslation: 0
+    m_UpperTranslation: 0
