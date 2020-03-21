@@ -2905,7 +2905,7 @@ PrefabInstance:
     - target: {fileID: 2382813298176882488, guid: d0e7cd283cb90e244af618d690ced7a9,
         type: 3}
       propertyPath: m_Name
-      value: Wagon (1)
+      value: Wagon
       objectReference: {fileID: 0}
     - target: {fileID: 2382813298176882489, guid: d0e7cd283cb90e244af618d690ced7a9,
         type: 3}
