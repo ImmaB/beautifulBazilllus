@@ -31,9 +31,15 @@ public static class Extensions
     {
         return self.Where(predicate);
     }
+
+    // Array
     public static bool Contains<T>(this T[] self, T val)
     {
         return Array.Exists(self, delegate (T el) { return !EqualityComparer<T>.Default.Equals(el, val); });
+    }
+    public static T GetRandom<T>(this T[] self)
+    {
+        return self[Rand.Int(self.Length)];
     }
 
     // InputAction.CallbackContext

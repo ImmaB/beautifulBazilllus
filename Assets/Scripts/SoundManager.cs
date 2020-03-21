@@ -19,11 +19,13 @@ public class SoundManager : MonoBehaviour
 
     internal static void PlaySlime()
     {
-        instance.slimeAudios[Rand.Int(instance.slimeAudios.Length)].Play();
+        instance.slimeAudios.GetRandom().Play();
     }
 
     internal static void PlayTrainShake()
     {
-        instance.trainShakeAudios[Rand.Int(instance.trainShakeAudios.Length)].Play();
+        if (!instance) return;
+        AudioSource trainShake = instance.trainShakeAudios.GetRandom(); 
+        trainShake.Play();
     }
 }
