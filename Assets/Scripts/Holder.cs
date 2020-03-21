@@ -6,7 +6,8 @@ using UnityEngine;
 public class Holder : MonoBehaviour
 {
     private SpriteRenderer sprite;
-    public HingeJoint2D joint { get; private set; }
+    private Rigidbody2D rigBod;
+    public HingeJoint2D joint;
 
     [SerializeField] private Color holdColor;
     private Color idleColor;
@@ -15,19 +16,14 @@ public class Holder : MonoBehaviour
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
+        rigBod = GetComponent<Rigidbody2D>();
         idleColor = sprite.color;
+        joint.enabled = false;
     }
 
     private void FixedUpdate()
     {
         if (holding && !joint.enabled) Hold();
-    }
-
-    internal void SetJoint(HingeJoint2D joint)
-    {
-        this.joint = joint;
-        joint.anchor = transform.localPosition;
-        joint.enabled = false;
     }
 
     internal void Hold(bool hold = true)
@@ -47,5 +43,11 @@ public class Holder : MonoBehaviour
         {
             joint.enabled = false;
         }
+    }
+
+    internal void AddForce(Vector2 force)
+    {
+        if (joint.enabled) return;
+        rigBod.AddForce(force);
     }
 }

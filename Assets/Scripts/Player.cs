@@ -6,8 +6,6 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Holder leftHolder;
     [SerializeField] private Holder rightHolder;
-    [SerializeField] private HingeJoint2D leftJoint;
-    [SerializeField] private HingeJoint2D rightJoint;
     [Space]
     [SerializeField] private Image healthBarImage;
     [SerializeField] private float lostHealthPerSecond;
@@ -27,15 +25,21 @@ public class Player : MonoBehaviour
     {
         input = GetComponent<PlayerInput>();
         rigBod = GetComponent<Rigidbody2D>();
-        leftHolder.SetJoint(leftJoint);
-        rightHolder.SetJoint(rightJoint);
     }
 
     // Update is called once per frame
     private void FixedUpdate()
     {
+        // if (moveInput.magnitude > Mathf.Epsilon)
+        //     rigBod.AddForce(moveInput * (holding ? moveStrengthWhenHolding : moveStrength));
+
         if (moveInput.magnitude > Mathf.Epsilon)
-            rigBod.AddForce(moveInput * (holding ? moveStrengthWhenHolding : moveStrength));
+        {
+            Vector2 force = moveInput * (holding ? moveStrengthWhenHolding : moveStrength);
+            leftHolder.AddForce(force);
+            rightHolder.AddForce(force);
+            rigBod.AddForce(force);
+        }
 
         if (inSaveZones == 0)
             LooseHealth(lostHealthPerSecond * Time.deltaTime);
