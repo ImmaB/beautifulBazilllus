@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class Wagon : MonoBehaviour
 {
-    public Vector2 maximumShake;
+    public float shakeInterval;
+    public float shakeIntervalTolerance;
+    public Vector2 minShakeForce;
+    public Vector2 maxShakeForce;
 
-    // Start is called before the first frame update
-    void Start()
+    private Rigidbody2D rigBod;
+
+    private void Start()
     {
-        
+        rigBod = GetComponent<Rigidbody2D>();
+        StartCoroutine("Shake");
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator Shake()
     {
-        
-    }
-
-    internal void Shake()
-    {
-        Vector2 randomShake = maximumShake * new Vector2(Rand.Float(-1, 1), Rand.Float(-1, 1));
+        while (true)
+        {
+            Vector2 randomShake = minShakeForce + (maxShakeForce - minShakeForce) * new Vector2(Rand.Float(-1, 1), Rand.Float(-1, 1));
+            rigBod.AddForce(randomShake);
+            yield return new WaitForSeconds(shakeInterval + Rand.Float(-1, 1) * shakeIntervalTolerance);
+        }
     }
 }

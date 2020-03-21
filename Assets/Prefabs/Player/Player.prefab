@@ -351,20 +351,6 @@ Transform:
   m_Father: {fileID: 2658254726718190508}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2176856567223041574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4613340089855600657}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: deae58b10ff72004e82d0195479f0b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  joint: {fileID: 4630133668876132089}
-  holdColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!233 &4630133668876132089
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -389,20 +375,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
---- !u!114 &5496274813550852074
+--- !u!114 &2176856567223041574
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6567460018596252324}
+  m_GameObject: {fileID: 4613340089855600657}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: deae58b10ff72004e82d0195479f0b45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joint: {fileID: 656962191874690046}
-  holdColor: {r: 0, g: 0, b: 0, a: 0}
+  joint: {fileID: 4630133668876132089}
+  holdColor: {r: 0, g: 1, b: 0.5636723, a: 1}
 --- !u!233 &656962191874690046
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -427,6 +413,20 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &5496274813550852074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6567460018596252324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: deae58b10ff72004e82d0195479f0b45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 656962191874690046}
+  holdColor: {r: 0, g: 1, b: 0.5647059, a: 1}
 --- !u!1 &9185866498730067254
 GameObject:
   m_ObjectHideFlags: 0
