@@ -243,6 +243,21 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: a7e832cc-d5e3-4f7f-81ce-432bac7e8f6c
     m_ActionName: InGame/HoldRight[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1899742823989174502}
+        m_MethodName: OnRetry
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 3b99bd14-01d0-4bab-b908-5afdef9433b6
+    m_ActionName: GameOver/Retry[/Keyboard/anyKey]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: InGame

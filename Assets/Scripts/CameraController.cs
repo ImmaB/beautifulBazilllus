@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private Transform followTarget;
+    [SerializeField] private Transform startPoint;
     [SerializeField][Range(0, 1)] private float followSpeed;
 
     private void FixedUpdate()

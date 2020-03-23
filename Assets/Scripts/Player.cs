@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading.Tasks;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -25,6 +26,7 @@ public class Player : MonoBehaviour
     {
         input = GetComponent<PlayerInput>();
         rigBod = GetComponent<Rigidbody2D>();
+        input.SwitchCurrentActionMap("InGame");
     }
 
     private void FixedUpdate()
@@ -41,13 +43,15 @@ public class Player : MonoBehaviour
             LooseHealth(lostHealthPerSecond * Time.deltaTime);
     }
 
-    internal void OnMove(InputAction.CallbackContext ctx)
+    public void OnMove(InputAction.CallbackContext ctx)
     {
         moveInput = ctx.ReadValue<Vector2>();
     }
 
-    internal void OnHoldLeft(InputAction.CallbackContext ctx) { OnHold(ctx, leftHolder); }
-    internal void OnHoldRight(InputAction.CallbackContext ctx) { OnHold(ctx, rightHolder); }
+    public void OnHoldLeft(InputAction.CallbackContext ctx) { OnHold(ctx, leftHolder); }
+    public void OnHoldRight(InputAction.CallbackContext ctx) { OnHold(ctx, rightHolder); }
+    
+    public void OnRetry(InputAction.CallbackContext ctx) { if (ctx.IsInputStop()) GameManager.Reload(); }
 
     private void OnHold(InputAction.CallbackContext ctx, Holder holder)
     {
@@ -61,10 +65,7 @@ public class Player : MonoBehaviour
     {
         health -= loss;
         healthBarImage.fillAmount = health;
-        if (health <= 0)
-        {
-            // GAME OVER
-        }
+        if (health <= 0.99) SetDead();
     }
 
     internal void SetSave(bool save = true)
@@ -82,4 +83,14 @@ public class Player : MonoBehaviour
                 saveParticles.Stop();
         }
     }
+
+    private void SetDead()
+    {
+        leftHolder.Hold(false);
+        rightHolder.Hold(false);
+        input.SwitchCurrentActionMap("GameOver");
+        // Task.Delay(3000).ContinueWith(t => GameManager.OnGameOver());
+        GameManager.instance.Invoke("OnGameOver", 3);
+    }
+
 }

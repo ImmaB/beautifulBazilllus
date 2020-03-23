@@ -274,6 +274,44 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "GameOver",
+            "id": "e64292c0-6aca-4211-93af-769d29e5412d",
+            "actions": [
+                {
+                    "name": "Retry",
+                    "type": "Button",
+                    "id": "3b99bd14-01d0-4bab-b908-5afdef9433b6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0c86ba3b-b5ec-4a33-b455-8062f7618018",
+                    "path": "<Keyboard>/anyKey",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Retry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "29f89a66-7b60-4782-bcee-94534f1bd6d3",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Retry",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
