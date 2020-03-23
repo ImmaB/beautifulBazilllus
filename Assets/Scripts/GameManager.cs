@@ -26,10 +26,13 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     
+    public static Player player { get; private set; }
+
     private void Awake()
     {
         if (instance) Debug.LogError("There can only be one GameManager per Scene");
         instance = this;
+        player = FindObjectOfType<Player>();
     }
 
 }

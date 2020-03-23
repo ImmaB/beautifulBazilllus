@@ -5,14 +5,14 @@ using UnityEngine;
 public class SaveZone : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D col)
-    {
+    {   
         if (col.gameObject.tag == Tag.player)
-            col.gameObject.GetComponent<Player>().inSaveZones++;
+            GameManager.player.SetSave(true);
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == Tag.player)
-            col.gameObject.GetComponent<Player>().inSaveZones--;
+            GameManager.player.SetSave(false);
     }
 }

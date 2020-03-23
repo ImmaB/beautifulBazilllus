@@ -18,7 +18,8 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigBod;
     private float health = 1;
     public bool holding { get { return leftHolder.joint.enabled || rightHolder.joint.enabled; } }
-    [HideInInspector] public int inSaveZones = 0;
+    private int inSaveZones = 0;
+    public ParticleSystem saveParticles;
 
     private void Start()
     {
@@ -63,6 +64,22 @@ public class Player : MonoBehaviour
         if (health <= 0)
         {
             // GAME OVER
+        }
+    }
+
+    internal void SetSave(bool save = true)
+    {
+        if (save)
+        {
+            inSaveZones++;
+            if (inSaveZones > 0)
+                saveParticles.Play();
+        }
+        else
+        {
+            inSaveZones--;
+            if (inSaveZones == 0)
+                saveParticles.Stop();
         }
     }
 }
