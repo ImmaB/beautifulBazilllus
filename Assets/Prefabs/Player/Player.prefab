@@ -156,8 +156,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftHolder: {fileID: 2176856567223041574}
   rightHolder: {fileID: 5496274813550852074}
+  sprite: {fileID: 609035797095881780}
+  saveColor: {r: 0.7529412, g: 1, b: 0.7882353, a: 1}
+  hurtColor: {r: 1, g: 0.65882355, b: 0.69803923, a: 1}
   healthBarImage: {fileID: 0}
   lostHealthPerSecond: 0.01
+  hurtMultiplier: 0
   moveStrength: 5
   moveStrengthWhenHolding: 15
   saveParticles: {fileID: 8242242727830131661}
@@ -173,8 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2f2ae314dd1034645af79e440159438e,
-    type: 3}
+  m_Actions: {fileID: 0}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
