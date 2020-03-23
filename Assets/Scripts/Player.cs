@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
     {
         health -= loss;
         healthBarImage.fillAmount = health;
-        if (health <= 0.99) SetDead();
+        if (health <= 0) SetDead();
     }
 
     internal void SetSave(bool save = true)
