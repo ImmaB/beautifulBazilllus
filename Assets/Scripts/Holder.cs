@@ -11,7 +11,7 @@ public class Holder : MonoBehaviour
 
     [SerializeField] private Color holdColor;
     private Color idleColor;
-    public bool holding { get; private set; } = false;
+    public bool holding { get; private set; } = true;
 
     private void Start()
     {
