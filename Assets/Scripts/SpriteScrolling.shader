@@ -7,6 +7,7 @@ Shader "Sprites/Scrolling"
         [PerRendererData] _MainTex ("Sprite Texture", 2D) = "white" {}
         _Color ("Tint", Color) = (1,1,1,1)
         _Speed ("Speed", float) = 1
+        _Saturation ("Saturation", float) = 1
         [MaterialToggle] PixelSnap ("Pixel snap", Float) = 0
         [HideInInspector] _RendererColor ("RendererColor", Color) = (1,1,1,1)
         [HideInInspector] _Flip ("Flip", Vector) = (1,1,1,1)
@@ -69,6 +70,7 @@ Shader "Sprites/Scrolling"
 
             // Material Color.
             float _Speed;
+            float _Saturation;
             fixed4 _Color;
 
             struct appdata_t
@@ -143,7 +145,7 @@ Shader "Sprites/Scrolling"
                 IN.texcoord.x %= 1.0;
                 fixed4 c = SampleSpriteTexture(IN.texcoord) * IN.color;
                 c.rgb *= c.a;
-                return c;
+                return ChangeSaturation(c, _Saturation);
             }
 
             
