@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -7,9 +8,13 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private Holder leftHolder;
     [SerializeField] private Holder rightHolder;
+    [SerializeField] private SpriteRenderer sprite;
+    [SerializeField] private Color saveColor;
+    [SerializeField] private Color hurtColor;
     [Space]
     [SerializeField] private Image healthBarImage;
     [SerializeField] private float lostHealthPerSecond;
+    [SerializeField] private float hurtMultiplier;
     [Space]
     public float moveStrength = 1;
     public float moveStrengthWhenHolding = 1;
@@ -19,7 +24,7 @@ public class Player : MonoBehaviour
     private Rigidbody2D rigBod;
     private float health = 1;
     public bool holding { get { return leftHolder.joint.enabled || rightHolder.joint.enabled; } }
-    private int inSaveZones = 0;
+    private int inSaveZones = 0, inHurtZones = 0;
     public ParticleSystem saveParticles;
 
     private void Start()
@@ -39,7 +44,9 @@ public class Player : MonoBehaviour
             rigBod.AddForce(force);
         }
 
-        if (inSaveZones == 0)
+        if (inHurtZones > 0)
+            LooseHealth(lostHealthPerSecond * Time.deltaTime * hurtMultiplier);
+        else if (inSaveZones == 0)
             LooseHealth(lostHealthPerSecond * Time.deltaTime);
     }
 
@@ -70,18 +77,31 @@ public class Player : MonoBehaviour
 
     internal void SetSave(bool save = true)
     {
-        if (save)
+        OnZoneEnterOrLeave(ref inSaveZones, save, () => saveParticles.Play(), () => saveParticles.Stop());
+        UpdateSpriteColor();
+    }
+
+    internal void SetHurt(bool hurt = true)
+    {
+        OnZoneEnterOrLeave(ref inHurtZones, hurt, () => {}, () => {});
+        UpdateSpriteColor();
+    }
+
+    private void OnZoneEnterOrLeave(ref int zoneCounter, bool entered, Action onEnter, Action onLeave)
+    {
+        if (entered)
         {
-            inSaveZones++;
-            if (inSaveZones > 0)
-                saveParticles.Play();
+            if (++zoneCounter == 1) onEnter();
         }
         else
         {
-            inSaveZones--;
-            if (inSaveZones == 0)
-                saveParticles.Stop();
+            if (--zoneCounter == 0) onLeave();
         }
+    }
+
+    private void UpdateSpriteColor()
+    {
+        sprite.color = inHurtZones > 0 ? hurtColor : (inSaveZones > 0 ? saveColor : Color.white);
     }
 
     private void SetDead()
@@ -89,7 +109,6 @@ public class Player : MonoBehaviour
         leftHolder.Hold(false);
         rightHolder.Hold(false);
         input.SwitchCurrentActionMap("GameOver");
-        // Task.Delay(3000).ContinueWith(t => GameManager.OnGameOver());
         GameManager.instance.Invoke("OnGameOver", 3);
     }
 
