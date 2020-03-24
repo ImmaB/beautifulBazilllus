@@ -13,6 +13,15 @@ public static class Extensions
         return new Vector2(v.x, v.y);
     }
 
+    // Vector3
+    public static Vector3 WithX(this Vector3 v, float x)
+    {
+        return new Vector3(x, v.y, v.z);
+    }
+    public static Vector3 WithZ(this Vector3 v, float z)
+    {
+        return new Vector3(v.x, v.y, z);
+    }
 
     // IEnumerable
     public static void ForEach<T>(this IEnumerable<T> self, Action<T> action)
