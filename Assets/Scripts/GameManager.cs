@@ -65,5 +65,6 @@ public class GameManager : MonoBehaviour
     {
         if (!(instance.GameOverScreen.activeSelf || instance.WinScreen.activeSelf)) return;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        state = GameState.running;
     }
 }
