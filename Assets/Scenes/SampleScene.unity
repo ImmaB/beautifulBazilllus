@@ -293,6 +293,8 @@ GameObject:
   m_Component:
   - component: {fileID: 115862659}
   - component: {fileID: 115862660}
+  - component: {fileID: 115862662}
+  - component: {fileID: 115862661}
   m_Layer: 0
   m_Name: Bakteriengirl
   m_TagString: Untagged
@@ -364,6 +366,48 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &115862661
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115862658}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.655132, y: 27.51}
+    newSize: {x: 5.655132, y: 27.51}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 2.888832, y: 5.3422165}
+      - {x: 0.617218, y: 15.527697}
+      - {x: -2.6041794, y: 4.7442746}
+      - {x: -0.20820557, y: -13.755}
+      - {x: -0.16790771, y: -13.647539}
+--- !u!114 &115862662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 115862658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a126a4588dabbd40a36e27911ebec60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &121504705
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6868,6 +6912,11 @@ PrefabInstance:
       propertyPath: GameOverScreen
       value: 
       objectReference: {fileID: 1781631584669891802}
+    - target: {fileID: 6536041572260429177, guid: f0291b15f328658408fb4137a9b31d2d,
+        type: 3}
+      propertyPath: WinScreen
+      value: 
+      objectReference: {fileID: 1781631584669891803}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0291b15f328658408fb4137a9b31d2d, type: 3}
 --- !u!1 &1469587700
@@ -10531,6 +10580,12 @@ PrefabInstance:
 --- !u!1 &1781631584669891802 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4011537269549724916, guid: 97cea1e62a5586f4cad92a1c8f0d8cd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1781631584669891801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1781631584669891803 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 723592690698100082, guid: 97cea1e62a5586f4cad92a1c8f0d8cd9,
     type: 3}
   m_PrefabInstance: {fileID: 1781631584669891801}
   m_PrefabAsset: {fileID: 0}

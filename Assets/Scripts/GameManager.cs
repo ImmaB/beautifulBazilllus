@@ -23,12 +23,19 @@ public static class Tag
     public static string saveZone = "Save Zone";
 }
 
+public enum GameState
+{
+    running, stopped
+}
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance { get; private set; }
     public static Player player { get; private set; }
+    public static GameState state { get; private set; } = GameState.running;
 
     public GameObject GameOverScreen;
+    public GameObject WinScreen;
 
     private void Awake()
     {
@@ -36,17 +43,27 @@ public class GameManager : MonoBehaviour
         instance = this;
         player = FindObjectOfType<Player>();
         instance.GameOverScreen.SetActive(false);
+        instance.WinScreen.SetActive(false);
     }
 
     internal void OnGameOver()
     {
+        state = GameState.stopped;
         SoundManager.StopAll();
+        player.DisableInput();
         GameOverScreen.SetActive(true);
+    }
+
+    internal void OnWin()
+    {
+        state = GameState.stopped;
+        SoundManager.StopAll();
+        WinScreen.SetActive(true);
     }
 
     internal static void Reload()
     {
-        if (!instance.GameOverScreen.activeSelf) return;
+        if (!instance.GameOverScreen.activeSelf || !instance.WinScreen.activeSelf) return;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

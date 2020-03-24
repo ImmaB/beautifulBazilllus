@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (GameManager.state != GameState.running) return;
         if (moveInput.magnitude > Mathf.Epsilon)
         {
             Vector2 force = moveInput * (holding ? moveStrengthWhenHolding : moveStrength);
@@ -106,10 +107,13 @@ public class Player : MonoBehaviour
 
     private void SetDead()
     {
-        leftHolder.Hold(false);
-        rightHolder.Hold(false);
-        input.SwitchCurrentActionMap("GameOver");
+        DisableInput();
         GameManager.instance.Invoke("OnGameOver", 3);
+    }
+
+    internal void DisableInput()
+    {
+        input.SwitchCurrentActionMap("GameOver");
     }
 
 }
