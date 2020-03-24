@@ -63,7 +63,7 @@ public class GameManager : MonoBehaviour
 
     internal static void Reload()
     {
-        if (!instance.GameOverScreen.activeSelf || !instance.WinScreen.activeSelf) return;
+        if (!(instance.GameOverScreen.activeSelf || instance.WinScreen.activeSelf)) return;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
