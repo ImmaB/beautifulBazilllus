@@ -7,12 +7,12 @@ public class HurtZone : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {   
         if (col.gameObject.tag == Tag.player)
-            GameManager.player.SetSave(true);
+            GameManager.player.SetHurt(true);
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.gameObject.tag == Tag.player)
-            GameManager.player.SetSave(false);
+            GameManager.player.SetHurt(false);
     }
 }
